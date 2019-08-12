@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 class Registration {
   constructor(
     public name:string = '',
@@ -36,9 +37,9 @@ export class RegistrationComponent implements OnInit {
   constructor() {
     // Add default registration data.
     this.registrations.push(new Registration("bangalore","offshore development","39 pipline","bangalore","karnataka","560086","india","080-61405806","9739570917","    ","www.skycliff.com"));
-    this.registrations.push(new Registration("bangalore","offshore development","39 pipline","bangalore","karnataka","560086","india","080-61405806","9739570917","    ","www.skycliff.com"));
-    this.registrations.push(new Registration("bangalore","offshore development","39 pipline","bangalore","karnataka","560086","india","080-61405806","9739570917","    ","www.skycliff.com"));
-    this.registrations.push(new Registration("bangalore","offshore development","39 pipline","bangalore","karnataka","560086","india","080-61405806","9739570917","    ","www.skycliff.com"));
+    this.registrations.push(new Registration("Mangalore","offshore development","39 pipline","bangalore","karnataka","560086","india","080-61405806","9739570917","    ","www.skycliff.com"));
+    this.registrations.push(new Registration("Hubli","offshore development","39 pipline","bangalore","karnataka","560086","india","080-61405806","9739570917","    ","www.skycliff.com"));
+    this.registrations.push(new Registration("Dharwad","offshore development","39 pipline","bangalore","karnataka","560086","india","080-61405806","9739570917","    ","www.skycliff.com"));
 
   }
 
@@ -101,5 +102,11 @@ export class RegistrationComponent implements OnInit {
     // Hide registration entry section.
     this.showNew = false;
   }
+  search(value) {
+    if (value != "") {
+      // Search the corresponding registration entry from the list.
+      this.registrations = this.registrations.filter(x => x.name.indexOf(value) != -1);
+    }
+    }
 
 }

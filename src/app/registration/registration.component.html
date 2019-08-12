@@ -1,11 +1,12 @@
-                       <!--Top Bar-->
+<!-----------------Header----------------------------------------------------------------------------------------->
                        <div class="x">
                        <header class="header">
                         <h1 class="logo"><a href="#">SkyCliff IT</a></h1>
+                        <div class="col-md-3">
+                          <input type="text" #f (keyup)="search(f.value)" placeholder="serch here">
+                        </div>
                       </header>
                     </div>
-
-
 <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <div class="container">
   <div class="reglist">
@@ -48,7 +49,7 @@
         </tr>
       </tbody>
     </table>
-    <div class="text-right">
+   <div class="text-right">
       <button type="submit" class="btn btn-primary" (click)="onNew()">Add New Location</button>
     </div>
   </div>
