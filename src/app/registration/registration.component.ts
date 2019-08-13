@@ -93,8 +93,10 @@ export class RegistrationComponent implements OnInit {
 
   // This method associate to Delete Button.
   onDelete(index: number) {
+    if(confirm("Are you sure to delete.... ")) {
     // Delete the corresponding registration entry from the list.
     this.registrations.splice(index, 1);
+    }
   }
 
   // This method associate toCancel Button.
